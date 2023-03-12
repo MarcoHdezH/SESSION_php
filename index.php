@@ -1,9 +1,11 @@
 <?php
 
 session_start();
+$Band=0;
 
-if (isset($_SESSION['username'])) {
-    $nombre = "Sesión de: ". $_SESSION['username'];
+if (isset($_SESSION['datos']['Usuario'])) {
+    $nombre = $_SESSION['datos']['Usuario'];
+    $Band=1;
 } else {
     $nombre = "No ha iniciado Sesión";
 }
@@ -17,13 +19,13 @@ if (isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <?php echo $nombre ?> </title>
+    <title> <?php echo "$nombre" ?> </title>
 </head>
 
 <body>
     <?php
-    if (isset($_SESSION['username'])) {
-        echo "<h1>Bienvenido</h1>";
+    if ($Band===1) {
+        echo "<h1>Bienvenido $nombre </h1>";
         echo "<a href='./pages/Logout.php'> Cerrar Sesión</a>";
     } else {
         echo "<h1>No ha iniciado sesion xd </h1>";

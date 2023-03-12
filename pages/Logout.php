@@ -7,6 +7,11 @@
     <title>Cerrar Sesión</title>
 </head>
 <body>
+    <?php 
+    session_start();
+    session_destroy();
+    ?>
+    <a href="../index.php">Regresar al Menu Principal</a>
     
 </body>
 </html>

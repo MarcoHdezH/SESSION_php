@@ -11,6 +11,19 @@
     <hr>
 
     <form action="../includes/Validar.php" method="POST">
+        <legend>Completa todos los Campos</legend>
+        <br><br>
+        <label>Nombre de Usuario:</label>
+        <input type="text" name="usuario" placeholder="Nombre de Ejemplo" required>
+        
+        <br>
+        <br>
+
+        <label>Contraseña:</label>
+        <input type="password" name="contraseña" placeholder="Contraseña de Ejemplo" required>
+        <br><br>
+
+        <input type="submit" value="Iniciar Sesión">
 
     </form>
     
