@@ -19,21 +19,30 @@ if (isset($_SESSION['datos']['Usuario'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title> <?php echo "$nombre" ?> </title>
 </head>
 
 <body>
     <?php
     if ($Band===1) {
-        echo "<h1>Bienvenido $nombre </h1>";
+        echo "<h1 class='p-5 text-center' >Bienvenido $nombre </h1>";
         echo "<a href='./pages/Logout.php'> Cerrar Sesión</a>";
     } else {
-        echo "<h1>No ha iniciado sesion xd </h1>";
-        echo "<a href='./pages/Login.php'>Iniciar Sesión</a><br><br>";
-        echo "<a href='./pages/Create.php'>Crear Usuario</a>";
+        echo "<h1 class='p-5 text-center'>No hay Ninguna Sesión Activa</h1>";
+        echo "<div class='container-fluid p-5 text-center'>
+                <div class='row p-5'>
+                    <div class='col-lg-6 text-center'>
+                        <a class='btn btn-lg btn-outline-dark' href='./pages/Login.php'>Iniciar Sesión</a>
+                    </div>
+                    
+                    <div class='col-lg-6 text-center'>
+                        <a class='btn btn-lg btn-outline-dark' href='./pages/Create.php'>Crear Usuario</a>
+                    </div>
+                </div>
+              </div>";
     }
     ?>
-
 </body>
 
 </html>
