@@ -13,7 +13,7 @@ if (isset($_SESSION['datos']['Usuario'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -26,8 +26,8 @@ if (isset($_SESSION['datos']['Usuario'])) {
 <body>
     <?php
     if ($Band===1) {
-        echo "<h1 class='p-5 text-center' >Bienvenido $nombre </h1>";
-        echo "<a href='./pages/Logout.php'> Cerrar Sesión</a>";
+        echo "<h1 class='p-5 text-center' >Sesion Activa: $nombre </h1>";
+        echo "<div class='text-center'><a class='btn btn-outline-dark btn-lg' href='./pages/Logout.php'> Cerrar Sesión</a></div>";
     } else {
         echo "<h1 class='p-5 text-center'>No hay Ninguna Sesión Activa</h1>";
         echo "<div class='container-fluid p-5 text-center'>
