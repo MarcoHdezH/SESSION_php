@@ -1,0 +1,12 @@
+CREATE DATABASE usuarios;
+
+USE usuarios;
+
+CREATE TABLE usuario( id INT(11) NOT NULL AUTO_INCREMENT, 
+                      usuario VARCHAR(128) NOT NULL, 
+                      contraseña VARCHAR(128) NOT NULL,
+                      nombre VARCHAR(256) NOT NULL, 
+                      correo VARCHAR(128) NOT NULL,
+                      imagen VARCHAR(64) NOT NULL,
+                      PRIMARY KEY(id));
+INSERT INTO usuario (usuario,contraseña,nombre,correo,imagen) VALUES ("LinceMistico01","123456","Marco Hernandez","Marco7245@hotmail.com","Usuario1.jpg");
