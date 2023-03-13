@@ -9,4 +9,5 @@ CREATE TABLE usuario( id INT(11) NOT NULL AUTO_INCREMENT,
                       correo VARCHAR(128) NOT NULL,
                       imagen VARCHAR(64) NOT NULL,
                       PRIMARY KEY(id));
+                      
 INSERT INTO usuario (usuario,contraseña,nombre,correo,imagen) VALUES ("LinceMistico01","123456","Marco Hernandez","Marco7245@hotmail.com","Usuario1.jpg");
